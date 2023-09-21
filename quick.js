@@ -9,7 +9,7 @@ xhr.open('GET',`https://newsapi.org/v2/top-headlines?sources=${source}&apikey=${
 
 //when response is ready
 xhr.onload=function(){
-    if(this.status===200){
+    if(this.status===426){
         let json=JSON.parse(this.responseText);
         //console.log(json);
         let articles = json.articles;
